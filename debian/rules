@@ -30,11 +30,10 @@ install-stamp: build-stamp
 	dh_testroot
 	dh_clean -k
 	dh_installdirs
-	dh_desktop -pgrpn
 	install -D -m644 debian/grpn.desktop $(CURDIR)/debian/$(PACKAGE)/usr/share/applications/grpn.desktop
-	install -o root -m 0755 $(CURDIR)/$(PACKAGE) $(CURDIR)/debian/$(PACKAGE)/usr/bin/
+	install -o root -m 0755 $(CURDIR)/src/$(PACKAGE) $(CURDIR)/debian/$(PACKAGE)/usr/bin/
 	install -d debian/grpn/usr/share/pixmaps
-	cp debian/grpn.{xpm,png} debian/grpn/usr/share/pixmaps/
+	cp debian/grpn.png debian/grpn.xpm debian/grpn/usr/share/pixmaps/
 
 # Build architecture-independent files here.
 binary-indep: build install
@@ -46,7 +45,7 @@ binary-arch: build install
 	dh_testroot
 	dh_installdocs
 	dh_installmenu
-	dh_installchangelogs CHANGES 
+	dh_installchangelogs src/CHANGES
 	dh_installman
 	dh_link
 	dh_strip
@@ -58,7 +57,7 @@ binary-arch: build install
 	dh_md5sums
 	dh_builddeb
 
-source diff:                                                                  
+source diff:
 	@echo >&2 'source and diff are obsolete - use dpkg-source -b'; false
 
 binary: binary-indep binary-arch

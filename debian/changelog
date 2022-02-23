@@ -1,3 +1,10 @@
+grpn (1.5.3) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+  * fix font rendering on hight DPI systems
+
+ -- tricia <tricia-grpn@cernu.us>  Sun, 11 Apr 2021 10:34:02 -0700
+
 grpn (1.5.2-1) stable; urgency=low
 
   *  refactor code in order to avoid compiler warnings
