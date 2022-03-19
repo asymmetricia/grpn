@@ -17,10 +17,10 @@ jobs:
         | sudo tee /etc/apt/sources.list.d/ubuntu-src.list
         sudo apt-get update
         DEBIAN_FRONTEND=noninteractive sudo apt-get -y build-dep grpn
-        DEBIAN_FRONTEND=noninteractive sudo apt-get -y install dpatch
+        DEBIAN_FRONTEND=noninteractive sudo apt-get -y install dpatch fakeroot
 
     - name: Build
-      run: debian/rules binary
+      run: fakeroot debian/rules binary
 
     - name: Release
       id: create_release      
