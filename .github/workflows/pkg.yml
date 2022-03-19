@@ -1,4 +1,4 @@
-name: Go
+name: package
 on:
   push:
     tags: ["*"]
