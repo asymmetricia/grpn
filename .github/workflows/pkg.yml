@@ -13,9 +13,9 @@ jobs:
 
     - name: Install build deps
       run: |
-        apt-get update
-        DEBIAN_FRONTEND=noninteractive apt-get -y build-dep grpn
-        DEBIAN_FRONTEND=noninteractive apt-get -y install dpatch
+        sudo apt-get update
+        DEBIAN_FRONTEND=noninteractive sudo apt-get -y build-dep grpn
+        DEBIAN_FRONTEND=noninteractive sudo apt-get -y install dpatch
 
     - name: Build
       run: debian/rules binary
