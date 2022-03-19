@@ -40,6 +40,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: grpn_${{ github.ref_name }}_amd64.deb
+        asset_path: ../grpn_${{ github.ref_name }}_amd64.deb
         asset_name: grpn_${{ github.ref_name }}_amd64.deb
         asset_content_type: application/octet-stream
