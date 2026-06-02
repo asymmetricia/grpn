@@ -51,6 +51,9 @@ void usage(char *str){
    fprintf(stderr, "   -disp-fn:  Use \"font\" for the main display.\n");
    fprintf(stderr, "   -fn:       Specifies both -btn-fn and -disp-fn.\n");
    fprintf(stderr, "   -bm:        basemode: dec, eng, bin, oct or hex.\n");
+#ifdef USE_PANGO
+   fprintf(stderr, "   compiled with pango support\n");
+#endif
 }
 
 GtkWidget *main_w;
