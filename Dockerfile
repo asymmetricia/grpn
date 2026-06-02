@@ -1,6 +1,6 @@
-FROM ubuntu:focal
+FROM ubuntu:jammy
 
-RUN echo deb-src http://us.archive.ubuntu.com/ubuntu focal main restricted universe >> /etc/apt/sources.list
+RUN echo deb-src http://us.archive.ubuntu.com/ubuntu jammy main restricted universe >> /etc/apt/sources.list
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -y build-dep grpn && \

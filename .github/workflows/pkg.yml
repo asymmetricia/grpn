@@ -5,7 +5,7 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
 
     - name: Check out code
@@ -13,7 +13,7 @@ jobs:
 
     - name: Install build deps
       run: |
-        echo 'deb-src http://archive.ubuntu.com/ubuntu focal main restricted universe multiverse' \
+        echo 'deb-src http://archive.ubuntu.com/ubuntu jammy main restricted universe multiverse' \
         | sudo tee /etc/apt/sources.list.d/ubuntu-src.list
         sudo apt-get update
         DEBIAN_FRONTEND=noninteractive sudo apt-get -y build-dep grpn
