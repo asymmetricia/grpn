@@ -1,9 +1,11 @@
-grpn (1.5.3) UNRELEASED; urgency=medium
+grpn (1.5.4) UNRELEASED; urgency=medium
 
   * Non-maintainer upload.
-  * fix font rendering on hight DPI systems
+  * fix font rendering on high DPI systems
+  * build on ubuntu 22.04
+  * enable pango for fonts
 
- -- tricia <tricia-grpn@cernu.us>  Sun, 11 Apr 2021 10:34:02 -0700
+ -- tricia <grpn@symme.link>  Mon, 01 Jun 2026 21:26:35 -0700
 
 grpn (1.5.2-1) stable; urgency=low
 
